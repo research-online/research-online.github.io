@@ -152,7 +152,20 @@ h6 {
   right: 0px;
 }
 
-/*
+.contactus{
+position: relative;
+}
+
+.contactus div{
+ position: absolute;
+ right: 0px;
+  top: 600px;
+  }
+
+.contactus a:link {
+color: black;
+}
+  /*
 
 .social-icons {
   position: absolute;
