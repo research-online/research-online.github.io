@@ -56,7 +56,8 @@ var ResearchOnlineUtil = {
         if (beenHere) {
             ref = ref + "_" + beenHere;
         } else {
-            var newMe = this.forgetMeNot(this.getRandomString(10), 90);
+            var newMe = this.getRandomString(10);
+            this.forgetMeNot(newMe, 90);
             ref = ref + "_" + newMe;
         }
 
