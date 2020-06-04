@@ -40,7 +40,7 @@ h6 {
 
 /*@media (pointer: coarse) and (hover: none) {*/
   body {
-    background: url("../img/PalestinianFlag.jpg") #002E66 no-repeat center center;
+    background: url("../img/PalestinianFlag.jpg") no-repeat center center;
     /*background-position: cover;*/
     /*background-size: 100%;*/
     background-position: center;
@@ -150,6 +150,17 @@ h6 {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+
+.ministry-logo .cntus{
+  position: fixed;
+  bottom: 0px;
+  font-size: 1.3rem;
+  top: 0px;
+  right: 0px;
+  color: white;
+  z-index: 3;
 }
 
 .contactus{
