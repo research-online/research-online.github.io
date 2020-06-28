@@ -1,0 +1,39 @@
+body,html {
+    background: url("../img/logo-transparent.png") no-repeat right top, linear-gradient(0deg,  #fff, #0434bc) repeat-x;
+    background-size: 35%;
+    position: relative;
+    height: 100%;
+}
+
+.rtl-text {
+    direction: rtl;
+}
+
+.ar-bg {
+    background-color: #007a3d;
+}
+
+.he-bg {
+     background-color: #0434bc;
+}
+
+.btn-round.btn-md {
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .mobile-height {
+        height: 250px;
+    }
+    .leading-bg-h {
+        background-color: rgba(4, 52, 188, 0.8);
+    }
+    .leading-bg-a {
+        background-color: rgba(41, 85, 41, 0.8);
+    }
+}
