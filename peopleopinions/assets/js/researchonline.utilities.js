@@ -66,6 +66,7 @@ var ResearchOnlineUtil = {
         search_params.set(this.Constants.otreeParticipantLabel, ref);
         newUrl.search = search_params.toString();
 
+
         obj.href = newUrl.toString();
     }
 };
