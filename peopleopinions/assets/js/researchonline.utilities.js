@@ -95,6 +95,30 @@ var ResearchOnlineUtil = {
         return btoa(queryString);
     },
 
+
+
+    /**
+     * Collects all the url parameters in the query string and returns them in base64 encoding
+     *
+     * @param optionalIdentifier is an optional string that will be added to the encoded set of parameters as: &optionalParameter
+     * @returns {string} Base64 encoded string
+     */
+    collectAndShortenURlParametersIPanel: function () {
+        var queryString = (new URLSearchParams(window.location.search)).toString();
+
+        // If the page is called with URL parameters, they are collected
+        if (queryString) {
+            // We try to reduce the length of the received parameters in order to fit them in 50 chars length
+            // that seems to be the upper size limit for the participant_label field
+            queryString = queryString.replace("i.project","p")
+            queryString = queryString.replace("i.user1","u")
+            queryString = queryString.replace("id","i")
+            queryString += "&h=" + this.beenHereBefore(this.Constants.inresearchLabel)
+        }
+
+        return queryString.replace(/&/g, "_");
+    },
+
     /**
      * Checks if the parameter is a string or an Anchor (<a href=destinationURL>) object.
      * If the value is a string it will only redirect the current page to the survey URL, adding the parameters in the URL
@@ -124,7 +148,7 @@ var ResearchOnlineUtil = {
             // Creating the final URL + participant_label
             var newUrl = new URL(destinationURL);
             var search_params = newUrl.searchParams;
-            search_params.set(this.Constants.otreeParticipantLabel, this.collectAndEncodeUrlParameters(optionalParam));
+            search_params.set(this.Constants.otreeParticipantLabel, this.collectAndShortenURlParametersIPanel(optionalParam));
             newUrl.search = search_params.toString();
 
             // If we received an Anchor object, we update its href attribute
