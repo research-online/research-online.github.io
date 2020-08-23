@@ -113,7 +113,15 @@ var ResearchOnlineUtil = {
             queryString = queryString.replace("i.project","p")
             queryString = queryString.replace("i.user1","u")
             queryString = queryString.replace("id","i")
-            queryString += "&h=" + this.beenHereBefore(this.Constants.inresearchLabel)
+
+            var beenHere = this.beenHereBefore(this.Constants.inresearchLabel);
+            if (!beenHere) {
+                var newMe = this.getRandomString(10);
+                this.forgetMeNot(newMe, 90);
+                beenHere = newMe;
+            }
+
+            queryString += "&h=" + beenHere
         }
 
         return queryString.replace(/&/g, "_");
