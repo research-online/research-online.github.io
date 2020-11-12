@@ -8,28 +8,28 @@
     // Initiate venobox (lightbox feature used in communications)
     $(document).ready(function () {
         $('.venobox_ngu').venobox({
-            framewidth: '440px',                            // default: ''
+            framewidth: '800px',                            // default: ''
             frameheight: '',                            // default: ''
             border: '0px',                             // default: '0'
             bgcolor: '#f49494',                          // King's College background
             spinColor: '#f49494',
             share: ['facebook', 'twitter'] // default: []
         });
-    });
 
-
-    if (window.location.hash) {
-        if (window.location.hash.includes("ngu")) {
-            $('.venobox_ngu').venobox({
-                framewidth: '440px',                            // default: ''
-                frameheight: '',                            // default: ''
-                border: '0px',                             // default: '0'
-                bgcolor: '#f49494',                          // King's College background
-                spinColor: '#f49494',
-                share: ['facebook', 'twitter'] // default: []
-            }).trigger('click');
+        // Automatically triggers the venobox_ngu popup whenever the hash #communications is in the URL
+        if (window.location.hash) {
+            if (window.location.hash.includes("communications")) {
+                $('.venobox_ngu').venobox({
+                    framewidth: '800px',                            // default: ''
+                    frameheight: '',                            // default: ''
+                    border: '0px',                             // default: '0'
+                    bgcolor: '#f49494',                          // King's College background
+                    spinColor: '#f49494',
+                    share: ['facebook', 'twitter'] // default: []
+                }).trigger('click');
+            }
         }
-    }
+    });
 
 
 })(jQuery);
