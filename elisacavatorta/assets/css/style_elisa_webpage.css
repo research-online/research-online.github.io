@@ -1096,8 +1096,14 @@ section {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #eaebf0;
+  color: #040b14;
 }
+
+#footer .credits a {
+  color: #040b14;
+  background: #040b14;
+}
+
 
 @media (max-width: 1199px) {
   #footer {
