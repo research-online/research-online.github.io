@@ -146,7 +146,7 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
+    // Initiate venobox (lightbox feature used in communications)
     $(document).ready(function() {
       $('.venobox').venobox();
     });
