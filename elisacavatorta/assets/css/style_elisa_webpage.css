@@ -341,6 +341,32 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Communications
+--------------------------------------------------------------*/
+.communications {
+  padding-bottom: 30px;
+}
+
+.communications .btn-communications-primary {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 3px;
+  transition: 0.5s;
+  color: #fff;
+  background: #009cea;
+}
+
+.communications .btn-communications-primary:hover {
+  background: #008bd1;
+}
+
+
+/*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
 .facts {
@@ -1070,13 +1096,19 @@ section {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #eaebf0;
+  color: #040b14;
 }
+
+#footer .credits a {
+  color: #040b14;
+  background: #040b14;
+}
+
 
 @media (max-width: 1199px) {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding-right: 20px;
   }
 }
