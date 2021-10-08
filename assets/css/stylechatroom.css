@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo h1 {
   font-size: 32px;
   margin: 0;
-  padding: 6px 0;
+  padding-bottom: 0px;
   line-height: 1;
   font-weight: 600;
   letter-spacing: 1px;
