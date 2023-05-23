@@ -1,9 +1,9 @@
 let SessionManagement = {
     sessionsCSV: undefined,
 
-    validateCode: function () {
+    validateCode: function (session_type) {
         let code = document.getElementById("confirm_code_text").value;
-        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code === code);
+        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code === code && sess.type === "PRE");
         let countSessions = validSession.length;
         if (countSessions === 1) {
             // If the code is for a valid session we show the access button and hide the code elements

@@ -53,17 +53,17 @@
             <div class="col-12 my-auto">
                 <div class="masthead-content text-white py-0 py-md-0 d-flex flex-column"
                      dir="auto">
-                    <div id="session_code_section" class="d-none">
+                    <div id="session_code_section">
 
                         <div class="p-2"><input id="confirm_code_text" class="form-control form-control-lg" type="text"
                                                 placeholder="Enter the Session Code" disabled="disabled"></div>
                         <div class="p-2"><input id="confirm_code_btn"
                                                 class="form-control form-control-lg confirm-code-btn" type="button"
                                                 value="Confirm Code" disabled="disabled"
-                                                onclick="SessionManagement.validateCode()"></div>
+                                                onclick="SessionManagement.validateCode('PRE')"></div>
                         <div id="error_message" class="p-2">&nbsp;</div>
                     </div>
-                    <div id="access_session_section">
+                    <div id="access_session_section" class="d-none">
                         <div class="p-2">
                             <h1 class="mb-3" id="welcome_text">Welcome to Session 1</h1>
                         </div>
