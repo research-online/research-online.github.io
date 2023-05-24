@@ -3,8 +3,9 @@ let SessionManagement = {
 
     validateCode: function (session_type) {
         let code = document.getElementById("confirm_code_text").value;
-        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code === code && sess.type === "PRE");
+        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code === code && sess.type === session_type);
         let countSessions = validSession.length;
+        console.log("Count of Sessions with same code: " + countSessions);
         if (countSessions === 1) {
             // If the code is for a valid session we show the access button and hide the code elements
             document.getElementById("goToSurveyLink").href = validSession[0].url;
@@ -19,7 +20,7 @@ let SessionManagement = {
             error_message.classList.remove('d-none');
         } else {
             let error_message = document.getElementById("error_message");
-            error_message.innerText = "More than one session with the same code. Contact support";
+            error_message.innerText = "More than one session with the same code. Contact Elisa";
             error_message.classList.remove('d-none');
         }
     },
@@ -30,7 +31,7 @@ let SessionManagement = {
         console.log(sessions.length)
         if (sessions.length !== 1) {
             let error_message = document.getElementById("error_message");
-            error_message.innerText = "More than one session with the same code. Contact support";
+            error_message.innerText = "More than one session with the same code. Contact Elisa";
             error_message.classList.remove('d-none');
             return null;
         }

@@ -8,7 +8,7 @@
     <meta content="" name="description">
     <meta content="" name="author">
 
-    <title> VR study - session 1 </title>
+    <title>Post VR - session 2</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/vr-session.css" rel="stylesheet">
+    <script src="assets/js/papaparse.min.js"></script>
     <script src="scripts/researchonline.utilities.js" type="text/javascript"></script>
+    <script src="scripts/researchonline.sessions.js" type="text/javascript"></script>
+
+    <!--    <script src="assets/js/d3-dsv@3.js"></script>-->
 
 </head>
 
@@ -44,14 +48,33 @@
 
 <div class="masthead">
     <div class="masthead-bg"></div>
-    <div class="container h-100">
+    <div class="container h-100 d-inline-flex">
         <div class="row h-50">
             <div class="col-12 my-auto">
-                <div class="masthead-content text-white py-0 py-md-0" dir="auto">
-                    <h1 class="mb-3">Welcome: click start when ready </h1>
+                <div class="masthead-content text-white py-0 py-md-0 d-flex flex-column"
+                     dir="auto">
+                    <div id="session_code_section">
 
-                    <a class="col-8 btn btn-secondary" href="https://school.inresearch.online/join/tebikide"
-                       id="goToSurveyLink" role="button">Start!</a>
+                        <div class="p-2"><input id="confirm_code_text" class="form-control form-control-lg" type="text"
+                                                placeholder="Enter the Session Code" disabled="disabled"></div>
+                        <div class="p-2"><input id="confirm_code_btn"
+                                                class="form-control form-control-lg confirm-code-btn" type="button"
+                                                value="Confirm Code" disabled="disabled"
+                                                onclick="SessionManagement.validateCode('POSTVR1')"></div>
+                        <div id="error_message" class="p-2">&nbsp;</div>
+                    </div>
+                    <div id="access_session_section" class="d-none">
+                        <div class="p-2">
+                            <h1 class="mb-3" id="welcome_text">Welcome to Session 1</h1>
+                        </div>
+                        <div class="p-2 d-flex justify-content-center flex-row">
+                            <div class="p-2"></div>
+                            <div class="p-2">
+                                <a class="btn btn-secondary btn-secondary-start-btn" href=""
+                                   id="goToSurveyLink" role="button">Start!</a></div>
+                            <div class="p-2"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +93,7 @@
 <script>
     // Expand the Survey's link with the details of the QRCode
     // so that it will be available also from copy link
-    ResearchOnlineUtil.accessSurvey(document.getElementById("goToSurveyLink"));
+    SessionManagement.loadCSV("/vr-egypt/sessions.csv");
 </script>
 </body>
 

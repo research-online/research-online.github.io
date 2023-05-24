@@ -1,11 +1,2 @@
 code,url,type,details
-001,https://www.example.com,PRE,First Draft
-002,https://www.iol.it,POST1,Second Draft
-003,https://www.ccc.it,POST1,Third Draft
-004,https://www.ccc.it,POST2,Fourth Draft
-005,https://www.ccc.it,POST1,Fifth Draft
-006,https://www.ccc.it,FINAL,Sixth Draft
-007,https://www.ccc.it,PRE,Seventh Draft
-008,https://www.ccc.it,FINAL,Eighth Draft
-009,https://www.ccc.it,POST2,Nineth Draft
-
+mage,https://vr-outcome-evaluation.herokuapp.com/join/magebodi,POSTVR1,"VR session 2, 24 May 2023"
