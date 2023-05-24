@@ -81,9 +81,24 @@ body video {
     width: 100%;
     min-height: 35rem;
     height: 100%;
-    background-color: rgba(139, 164, 248, 0.8);
     transform: skewY(90deg);
     transform-origin: bottom right;
+}
+
+.final-questionnaire-bg{
+    background-color: rgba(29, 34, 103, 0.53);
+}
+
+.scene3-questionnaire-bg{
+    background-color: rgba(139, 164, 248, 0.8);
+}
+
+.scene1-questionnaire-bg{
+    background-color: rgba(248, 139, 139, 0.8);
+}
+
+.pre-questionnaire-bg{
+    background-color: rgba(139, 164, 248, 0.8);
 }
 
 .masthead .masthead-content h1 {
