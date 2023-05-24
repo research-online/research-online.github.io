@@ -3,7 +3,7 @@ let SessionManagement = {
 
     validateCode: function (session_type) {
         let code = document.getElementById("confirm_code_text").value;
-        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code === code && sess.type === session_type);
+        let validSession = SessionManagement.sessionsCSV.data.filter(sess => sess.code.toLowerCase() === code.toLowerCase() && sess.type === session_type);
         let countSessions = validSession.length;
         console.log("Count of Sessions with same code: " + countSessions);
         if (countSessions === 1) {
